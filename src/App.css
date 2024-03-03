@@ -1,38 +1,175 @@
+:root {
+  --bg: #101010;
+  --text: #fff;
+  --text-secondary: #a2a2a2;
+  --accent: #bb4b4b;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+html,
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  height: fit-content;
+}
+
+p,
+h2,
+h3 {
+  font-family: "Ubuntu Mono", monospace;
+  margin: 0;
+  padding: 0.2rem 0.2rem 0 0.2rem;
+  text-align: left;
+}
+
 .App {
   text-align: center;
+  padding: 5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.HalfNHalf {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: fit-content;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.LeftContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1.4rem;
+}
+
+.BigFatTypewriterName {
+  text-align: left;
+  font-size: 3.5rem;
+  letter-spacing: 0.4rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+.LittleSmallUndernameTitle {
+  text-align: left;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent);
+}
+
+.LinksBoutSelf {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.LinksBoutSelf > a {
+  color: #a2a2a2;
+  transition: color, transform 0.25s;
+  font-size: 2rem;
+}
+
+.IconLink {
+  color: #a2a2a2;
+  transition: color, transform 0.25s;
+  font-size: 2rem;
+}
+
+.IconLinkHover:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+  transition: color, transform 0.25s;
+}
+
+.LinksBoutSelf > a:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+  transition: color, transform 0.25s;
+}
+
+/* Project Card List */
+
+/* prob make this a grid or something so that it can all fit in one page, or just not have that many projects LOL */
+
+.ProjectListContainer {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  height: auto;
+}
+
+.CardContainer {
+  border: 2px solid #343434;
+  padding: 1rem;
+  border-radius: 0.75rem;
+
+  box-shadow: 1rem 0.75rem 2rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.ProjectInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ProjectTechUsedContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.TechIcon {
+  border: 0.15rem solid #343434;
+  color: var(--text-secondary);
+  border-radius: 0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem;
+
+  transition: transform 0.25s;
+}
+
+.TechIcon:hover {
+  transform: scale(1.1);
+  border-color: var(--accent);
+
+  transition: transform 0.25s;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ProjectName {
+  text-decoration: underline var(--accent);
+  font-size: 1.35rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.ProjectDescription {
+  color: var(--text-secondary);
+}
+
+/* This is all stuff for mobile */
+@media screen and (max-width: 600px) {
+  /* This just makes it not two columns */
+  .HalfNHalf {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 800px) {
+  .App {
+    padding: 2rem;
   }
 }
