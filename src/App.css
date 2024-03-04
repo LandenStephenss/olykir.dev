@@ -89,6 +89,22 @@ h3 {
   transition: color, transform 0.25s;
 }
 
+.TypewriterBar {
+  color: var(--accent);
+  font-weight: 400;
+  animation: blink 0.75s infinite;
+  margin-left: -0.3rem;
+}
+
+@keyframes blink {
+  0% {
+    color: var(--accent);
+  }
+  50% {
+    color: var(--bg);
+  }
+}
+
 /* Project Card List */
 
 /* prob make this a grid or something so that it can all fit in one page, or just not have that many projects LOL */
@@ -102,7 +118,7 @@ h3 {
   height: auto;
 }
 
-.CardContainer {
+.CardContent {
   border: 2px solid #343434;
   padding: 1rem;
   border-radius: 0.75rem;
