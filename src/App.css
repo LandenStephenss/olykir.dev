@@ -30,7 +30,7 @@ h3 {
 
 .HalfNHalf {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 44% 12% 44%;
   height: fit-content;
 }
 
@@ -58,32 +58,45 @@ h3 {
   text-decoration-color: var(--accent);
 }
 
+.IntroductionUnderTitle {
+  text-align: left;
+  font-size: 1.85rem;
+  color: var(--text);
+  font-weight: 400;
+  text-align: left;
+}
+
+.RedUnderline {
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent);
+}
+
 .LinksBoutSelf {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .LinksBoutSelf > a {
   color: #a2a2a2;
-  transition: color, transform 0.25s;
-  font-size: 2rem;
+  transition: all 0.25s;
+  font-size: 2.25rem;
+}
+
+.LinksBoutSelf > a:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+  transition: all 0.25s;
 }
 
 .IconLink {
   color: #a2a2a2;
-  transition: color, transform 0.25s;
+  transition: all 0.25s;
   font-size: 2rem;
 }
 
 .IconLinkHover:hover {
-  color: var(--accent);
-  transform: scale(1.1);
-  transition: color, transform 0.25s;
-}
-
-.LinksBoutSelf > a:hover {
   color: var(--accent);
   transform: scale(1.1);
   transition: color, transform 0.25s;
@@ -105,25 +118,113 @@ h3 {
   }
 }
 
-/* Project Card List */
+.CenterDivider {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 0.2rem;
+  border-radius: 5rem;
+  height: 100%;
+  margin: auto;
 
-/* prob make this a grid or something so that it can all fit in one page, or just not have that many projects LOL */
+  transition: height 0.25s;
+}
+
+/** If i want fancy cards, kinda scuffed */
+
+/* .ProjectListContainer {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  height: auto;
+}
+
+#ProjectListContainer:hover > .CardContainer::after {
+  opacity: 1;
+}
+
+.CardContainer {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+
+  flex-direction: column;
+  position: relative;
+}
+
+.CardContainer:hover::before {
+  opacity: 1;
+}
+
+.CardContainer::before,
+.CardContainer::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 300ms ease-out;
+  width: 100%;
+}
+
+.CardContainer::before {
+  background: radial-gradient(
+    400px circle at var(--x) var(--y),
+    rgba(255, 255, 255, 0.03),
+    transparent 50%
+  );
+  z-index: 3;
+}
+
+.CardContainer::after {
+  background: radial-gradient(
+    600px circle at var(--x) var(--y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.CardContent {
+  background-color: var(--bg);
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 1px;
+  padding: 0.75rem;
+  margin: 2px;
+
+  z-index: 2;
+} */
+
+/** end scuffed */
 
 .ProjectListContainer {
   max-width: 40rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.5rem;
 
   height: auto;
 }
 
-.CardContent {
-  border: 2px solid #343434;
-  padding: 1rem;
-  border-radius: 0.75rem;
-
+.CardContainer {
+  background-color: #343434;
+  position: relative;
   box-shadow: 1rem 0.75rem 2rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.75rem;
+  z-index: 1;
+}
+
+.CardContent {
+  padding: 0.75rem;
+  margin: 2px;
+  border-radius: inherit;
+  background-color: var(--bg);
+  z-index: 3;
 }
 
 .ProjectInfoContainer {
@@ -136,7 +237,7 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
   padding-top: 1rem;
   font-size: 1.25rem;
 }
@@ -159,12 +260,6 @@ h3 {
   transition: transform 0.25s;
 }
 
-.Container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .ProjectName {
   text-decoration: underline var(--accent);
   font-size: 1.35rem;
@@ -181,6 +276,13 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+  }
+
+  .CenterDivider {
+    width: 100%;
+    height: 0.2rem;
+
+    transition: width 0.25s;
   }
 }
 

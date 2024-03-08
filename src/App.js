@@ -17,7 +17,17 @@ import React, { useState, useEffect } from "react";
 const Projects = [
   {
     title: "Saber",
-    description: "A Discord bot for VPSNode.",
+    description: (
+      <>
+        A Discord bot for{" "}
+        <a
+          style={{ textDecoration: "none", color: "var(--text-secondary)" }}
+          href="https://vpsnode.org"
+        >
+          VPSNode
+        </a>
+      </>
+    ),
     tech: [faDiscord, faNodeJs],
     link: "https://github.com",
   },
@@ -41,8 +51,15 @@ function RenderLinkIcon({ link }) {
 }
 
 function ProjectCard(project) {
+  const MouseMoveEvent = (e) => {
+    // const { x, y } = e.currentTarget.getBoundingClientRect();
+    // console.log(x, y);
+    // e.currentTarget.style.setProperty("--x", e.clientX - x + "px");
+    // e.currentTarget.style.setProperty("--y", e.clientY - y + "px");
+  };
+
   return (
-    <div className="CardContainer">
+    <div className="CardContainer" onMouseMove={MouseMoveEvent}>
       <div className="CardContent">
         <div
           style={{
@@ -85,32 +102,43 @@ function TypewriterEffectWithMultipleLines({ lines }) {
 
   useEffect(() => {
     if (currentText.length < currentLine.length) {
+      const MinTime = 100;
+      const MaxTime = 275;
+
+      const RandomTime = Math.floor(
+        Math.random() * (MaxTime - MinTime + 1) + MinTime
+      );
+
       const timeout = setTimeout(() => {
         setCurrentText((prev) => prev + currentLine[currentIndex]);
         setCurrentIndex((prev) => prev + 1);
-      }, 175);
+      }, RandomTime);
 
       return () => {
         clearTimeout(timeout);
       };
     } else {
       const timeout = setTimeout(() => {
-        if (lines.indexOf(currentLine) > lines.length) {
-          setCurrentLine("test");
+        if (lines.indexOf(currentLine) + 1 >= lines.length) {
+          setCurrentLine(lines[0]);
         } else {
-          const currentIndex = lines.indexOf(currentLine);
-          setCurrentLine(lines[currentIndex + 1]);
+          const idx = lines.indexOf(currentLine);
+          console.log(idx);
+          setCurrentLine(lines[idx + 1]);
         }
 
-        setCurrentText("");
         setCurrentIndex(0);
-      }, 1500);
+        setCurrentText("");
+
+        // setCurrentText("");
+        // setCurrentIndex(1);
+      }, 3000);
 
       return () => {
         clearTimeout(timeout);
       };
     }
-  }, [currentIndex, currentLine, currentIndex]);
+  }, [currentIndex, currentLine, currentText, lines]);
 
   return (
     <span>
@@ -130,31 +158,49 @@ function App() {
               {" "}
               <h2 className="BigFatTypewriterName">
                 <TypewriterEffectWithMultipleLines
-                  lines={["Olykir", "Landen"]}
+                  lines={["Olykir", "Landen", "Oly"]}
                 />
               </h2>{" "}
-              {/* maybe do cool typewriter effect with bunch of different aliases */}
-              <p className="LittleSmallUndernameTitle">
-                Awesome Sauce Spaghetti Code
+              <br />
+              <p className="LittleSmallUndernameTitle">Spaghetti Code Writer</p>
+              <br />
+              <p className="IntroductionUnderTitle">
+                Coding up innovative websites and vanquishing foes across
+                fantastical digital planes, this is the nexus showcasing my
+                adventures as a{" "}
+                <span className="RedUnderline">full-stack developer</span> and
+                gaming aficionado.
               </p>
+              {/* <p className="IntroductionUnderTitle">
+                &emsp;When Im not furiously keyboard-mashing, you'll find me
+                questing through fantasy realms, blasting alien scum, or racing
+                cyberpunks down a digital street. This site showcases my latest
+                coding shenanigans and gameplay highlights from my double life
+                as a <span className="RedUnderline">Web Developer</span> by day,
+                gaming guerilla by night.
+              </p> */}
+            </div>
+            <br />
+            <br />
+            <div className="LinksBoutSelf">
+              {/*links (icon buttons)*/}
+              <a href="https://github.com/LandenStephenss">
+                <FontAwesomeIcon icon={faGithubAlt} />
+              </a>
+              <a href="https://discordapp.com/users/621154191192096778">
+                <FontAwesomeIcon icon={faDiscord} />
+              </a>
+              <a href="https://steamcommunity.com/id/ItsOlykir/">
+                <FontAwesomeIcon icon={faSteam} />
+              </a>
+              <a href="https://www.tiktok.com/@olykir">
+                <FontAwesomeIcon icon={faTiktok} />
+              </a>
             </div>
           </div>
-          <div className="LinksBoutSelf">
-            {/*links (icon buttons)*/}
-            <a href="https://github.com/LandenStephenss">
-              <FontAwesomeIcon icon={faGithubAlt} />
-            </a>
-            <a href="https://discordapp.com/users/621154191192096778">
-              <FontAwesomeIcon icon={faDiscord} />
-            </a>
-            <a href="https://steamcommunity.com/id/ItsOlykir/">
-              <FontAwesomeIcon icon={faSteam} />
-            </a>
-            <a href="https://www.tiktok.com/@olykir">
-              <FontAwesomeIcon icon={faTiktok} />
-            </a>
-          </div>
         </div>
+
+        <div className="CenterDivider" />
 
         <div>
           <div className="ProjectListContainer">
