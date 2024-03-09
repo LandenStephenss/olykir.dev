@@ -23,6 +23,29 @@ h3 {
   text-align: left;
 }
 
+.AppGrid {
+  padding: 5rem;
+  display: grid;
+
+  grid-template-areas:
+    "i d p"
+    "t d p";
+
+  grid-template-columns: 44% 12% 44%;
+}
+
+.GridInfoArea {
+  grid-area: i;
+}
+
+.GridProjectsArea {
+  grid-area: p;
+}
+
+.GridTechnologyArea {
+  grid-area: t;
+}
+
 .App {
   text-align: center;
   padding: 5rem;
@@ -64,6 +87,7 @@ h3 {
   color: var(--text);
   font-weight: 400;
   text-align: left;
+  line-height: 2.075rem;
 }
 
 .RedUnderline {
@@ -102,6 +126,13 @@ h3 {
   transition: color, transform 0.25s;
 }
 
+.Header {
+  text-align: left;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
 .TypewriterBar {
   color: var(--accent);
   font-weight: 400;
@@ -127,6 +158,12 @@ h3 {
   margin: auto;
 
   transition: height 0.25s;
+
+  grid-area: d;
+}
+
+.TechDivider {
+  display: none;
 }
 
 /** If i want fancy cards, kinda scuffed */
@@ -211,6 +248,10 @@ h3 {
   height: auto;
 }
 
+.ProjectsHeader {
+  display: none;
+}
+
 .CardContainer {
   background-color: #343434;
   position: relative;
@@ -269,13 +310,37 @@ h3 {
   color: var(--text-secondary);
 }
 
+.TechUsedContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.TechUsedCard {
+  width: 6rem;
+  height: 6rem;
+  border: 3px solid #343434;
+  border-radius: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 /* This is all stuff for mobile */
-@media screen and (max-width: 600px) {
-  /* This just makes it not two columns */
-  .HalfNHalf {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+@media screen and (max-width: 800px) {
+  .AppGrid {
+    grid-template-areas:
+      "i"
+      "d"
+      "p"
+      "dd"
+      "t";
+
+    grid-template-columns: 100%;
+    padding: 2rem;
   }
 
   .CenterDivider {
@@ -283,11 +348,24 @@ h3 {
     height: 0.2rem;
 
     transition: width 0.25s;
+    margin-top: 1.5rem;
   }
-}
 
-@media screen and (max-width: 800px) {
-  .App {
-    padding: 2rem;
+  .TechDivider {
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5rem;
+
+    transition: width 0.25s;
+    margin-top: 3.5rem;
+    grid-area: dd;
+  }
+
+  .ProjectsHeader {
+    display: block;
   }
 }
