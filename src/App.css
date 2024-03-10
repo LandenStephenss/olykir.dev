@@ -123,7 +123,7 @@ h3 {
 .IconLinkHover:hover {
   color: var(--accent);
   transform: scale(1.1);
-  transition: color, transform 0.25s;
+  transition: transform 0.5s, color 0.5s;
 }
 
 .Header {
@@ -291,14 +291,15 @@ h3 {
   height: 1.5rem;
   padding: 0.5rem;
 
-  transition: transform 0.25s;
+  transition: transform 0.5s, border-color 0.5s, color 0.5s;
 }
 
 .TechIcon:hover {
-  transform: scale(1.1);
-  border-color: var(--accent);
+  transform: scale(1.05);
+  border-color: var(--text-secondary);
+  color: var(--accent);
 
-  transition: transform 0.25s;
+  transition: transform 0.5s, border-color 0.5s, color 0.5s;
 }
 
 .ProjectName {
@@ -327,6 +328,16 @@ h3 {
   justify-content: center;
   align-items: center;
   display: flex;
+
+  transition: all 0.5s;
+}
+
+.TechUsedCard:hover {
+  border: 3px solid var(--text-secondary);
+  color: var(--accent);
+  transform: scale(1.05);
+
+  transition: all 0.5s;
 }
 
 /* This is all stuff for mobile */
