@@ -7,13 +7,18 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Styles from "./App.module.scss";
-import React, { ComponentProps } from "react";
+import React, { ComponentProps, useState } from "react";
 
 // Components
 import ProjectCard from "./components/ProjectCard.tsx";
 import TypewriterEffectWithMultipleLines from "./components/Typewriter.tsx";
 import TechCard from "./components/TechCard.tsx";
-import { useInput, TextInput, ButtonInput } from "./components/Input.tsx";
+import {
+  useInput,
+  TextInput,
+  ButtonInput,
+  TextAreaInput,
+} from "./components/Input.tsx";
 
 import { Projects, UsedTech } from "./constants.tsx";
 
@@ -106,7 +111,9 @@ function ContactMe() {
   const nameInputProps = useInput();
   const messageInputProps = useInput();
 
-  // need to send email on button click kthx later gator
+  const [hasSent, setSent] = useState<boolean>(false);
+
+  // Still need to figure out how to send this.
 
   return (
     <div className={Styles.ContactMeArea}>
@@ -114,28 +121,51 @@ function ContactMe() {
       <br />
       <h1 className={Styles.HaveIdea}>Have an idea?</h1>
       <h1 className={Styles.LetsChat}>Let's have a chat!</h1>
-      <div className={Styles.ContactMeInputs}>
-        <TextInput
-          style={{ gridArea: "email" }}
-          {...emailInputProps}
-          placeholder="Your Email"
-        />
+      {hasSent ? (
+        <>
+          <h1 className={Styles.MessageSent}>
+            Your message has been sent, I'll get back with you shortly!
+          </h1>
+          <span
+            className={Styles.AnotherMessage}
+            onClick={() => setSent(false)}
+          >
+            Need to send another message?
+          </span>
+        </>
+      ) : (
+        <>
+          <div className={Styles.ContactMeInputs}>
+            <TextInput
+              style={{ gridArea: "email" }}
+              {...emailInputProps}
+              placeholder="Your Email"
+            />
 
-        <TextInput
-          style={{ gridArea: "name" }}
-          {...nameInputProps}
-          placeholder="Your Name"
-        />
+            <TextInput
+              style={{ gridArea: "name" }}
+              {...nameInputProps}
+              placeholder="Your Name"
+            />
 
-        <TextInput
-          style={{ gridArea: "message" }}
-          {...messageInputProps}
-          placeholder="Your Message"
-        />
-      </div>
-      <br />
-      <br />
-      <ButtonInput text="Send Message" icon={faPaperPlane} />
+            <TextAreaInput
+              style={{ gridArea: "message" }}
+              {...messageInputProps}
+              placeholder="Your Message"
+            />
+          </div>
+          <br />
+          <br />
+
+          <div>
+            <ButtonInput
+              onClick={() => setSent(true)}
+              text="Send Message"
+              icon={faPaperPlane}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 }

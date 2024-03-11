@@ -207,6 +207,56 @@ h3 {
   gap: 1rem;
 }
 
+.MessageSent {
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.AnotherMessage {
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: color 0.5s;
+  margin: 0;
+
+  &:hover {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--text-secondary);
+
+    transition: color 0.5s;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .TechUsedContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .TechUsedContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .TechUsedContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .TechUsedContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* This is all stuff for mobile */
 @media screen and (max-width: 800px) {
   .AppGrid {

@@ -34,7 +34,6 @@ export default function TypewriterEffectWithMultipleLines({
           setCurrentLine(lines[0]);
         } else {
           const idx = lines.indexOf(currentLine);
-          console.log(idx);
           setCurrentLine(lines[idx + 1]);
         }
 

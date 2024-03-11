@@ -10,7 +10,6 @@ export type Tech = {
 };
 
 export default function TechCard(tech: Tech) {
-  console.log(tech);
   return (
     <a href={tech.url}>
       <div className={Styles.TechCard}>
