@@ -1,0 +1,68 @@
+.CardContainer {
+  background-color: #343434;
+  position: relative;
+  box-shadow: 1rem 0.75rem 2rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.75rem;
+  z-index: 1;
+}
+
+.CardContent {
+  padding: 0.75rem;
+  margin: 2px;
+  border-radius: inherit;
+  background-color: var(--bg);
+  z-index: 3;
+}
+
+.ProjectInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ProjectTechUsedContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.TechIcon {
+  border: 0.15rem solid #343434;
+  color: var(--text-secondary);
+  border-radius: 0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem;
+  transition: transform 0.5s, border-color 0.5s, color 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: var(--text-secondary);
+    color: var(--accent);
+    transition: transform 0.5s, border-color 0.5s, color 0.5s;
+  }
+}
+
+.ProjectName {
+  text-decoration: underline var(--accent);
+  font-size: 1.35rem;
+}
+
+.ProjectDescription {
+  color: var(--text-secondary);
+}
+
+.IconLink {
+  color: #a2a2a2;
+  transition: all 0.25s;
+  font-size: 1.5rem;
+
+  &:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+    transition: transform 0.5s, color 0.5s;
+  }
+}

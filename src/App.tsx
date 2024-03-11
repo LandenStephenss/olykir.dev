@@ -5,8 +5,6 @@ import {
   faSteam,
   faTiktok,
   faReact,
-  faInternetExplorer,
-  faGithub,
   faNodeJs,
   faFigma,
   faApple,
@@ -18,7 +16,11 @@ import {
   faSass,
 } from "@fortawesome/free-brands-svg-icons";
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React from "react";
+
+// Components
+import ProjectCard from "./components/ProjectCard.tsx";
+import TypewriterEffectWithMultipleLines from "./components/Typewriter.tsx";
 
 const Projects = [
   {
@@ -44,115 +46,6 @@ const Projects = [
     link: "https://facebook.com",
   },
 ];
-
-/**
- * React Component, not a function
- */
-function RenderLinkIcon({ link }) {
-  if (link.includes("github")) {
-    return <FontAwesomeIcon icon={faGithub} />;
-  }
-
-  return <FontAwesomeIcon icon={faInternetExplorer} />;
-}
-
-function ProjectCard(project) {
-  const MouseMoveEvent = (e) => {
-    // const { x, y } = e.currentTarget.getBoundingClientRect();
-    // console.log(x, y);
-    // e.currentTarget.style.setProperty("--x", e.clientX - x + "px");
-    // e.currentTarget.style.setProperty("--y", e.clientY - y + "px");
-  };
-
-  return (
-    <div className="CardContainer" onMouseMove={MouseMoveEvent}>
-      <div className="CardContent">
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            flexDirection: "row",
-          }}
-        >
-          <div className="ProjectInfoContainer">
-            <h3 className="ProjectName">{project.title}</h3>
-            <p className="ProjectDescription">{project.description}</p>
-          </div>
-          {project.link ? (
-            <a
-              className="IconLink IconLinkHover"
-              style={{ fontSize: "1.5rem" }}
-              href={project.link}
-            >
-              <RenderLinkIcon link={project.link} />
-            </a>
-          ) : (
-            void 0
-          )}
-        </div>
-        <div className="ProjectTechUsedContainer">
-          {project.tech.map((ico) => (
-            <FontAwesomeIcon className="TechIcon" icon={ico} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function TypewriterEffectWithMultipleLines({ lines }) {
-  const [currentLine, setCurrentLine] = useState(lines[0]);
-
-  const [currentText, setCurrentText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    if (currentText.length < currentLine.length) {
-      const MinTime = 100;
-      const MaxTime = 275;
-
-      const RandomTime = Math.floor(
-        Math.random() * (MaxTime - MinTime + 1) + MinTime
-      );
-
-      const timeout = setTimeout(() => {
-        setCurrentText((prev) => prev + currentLine[currentIndex]);
-        setCurrentIndex((prev) => prev + 1);
-      }, RandomTime);
-
-      return () => {
-        clearTimeout(timeout);
-      };
-    } else {
-      const timeout = setTimeout(() => {
-        if (lines.indexOf(currentLine) + 1 >= lines.length) {
-          setCurrentLine(lines[0]);
-        } else {
-          const idx = lines.indexOf(currentLine);
-          console.log(idx);
-          setCurrentLine(lines[idx + 1]);
-        }
-
-        setCurrentIndex(0);
-        setCurrentText("");
-
-        // setCurrentText("");
-        // setCurrentIndex(1);
-      }, 3000);
-
-      return () => {
-        clearTimeout(timeout);
-      };
-    }
-  }, [currentIndex, currentLine, currentText, lines]);
-
-  return (
-    <span>
-      {currentText}
-      <span className="TypewriterBar">_</span>
-    </span>
-  );
-}
 
 const UsedTech = [
   {
@@ -209,12 +102,12 @@ function App() {
     <div className="AppGrid">
       <div className="GridInfoArea">
         <div className="InformationBoutSelf">
-          {" "}
           <h2 className="BigFatTypewriterName">
             <TypewriterEffectWithMultipleLines
               lines={["Olykir", "Landen", "Oly"]}
             />
-          </h2>{" "}
+          </h2>
+
           <br />
           <p className="LittleSmallUndernameTitle">Spaghetti Code Writer</p>
           <br />

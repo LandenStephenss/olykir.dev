@@ -114,39 +114,11 @@ h3 {
   transition: all 0.25s;
 }
 
-.IconLink {
-  color: #a2a2a2;
-  transition: all 0.25s;
-  font-size: 2rem;
-}
-
-.IconLinkHover:hover {
-  color: var(--accent);
-  transform: scale(1.1);
-  transition: transform 0.5s, color 0.5s;
-}
-
 .Header {
   text-align: left;
   font-weight: 700;
   text-decoration: underline;
   text-decoration-color: var(--accent);
-}
-
-.TypewriterBar {
-  color: var(--accent);
-  font-weight: 400;
-  animation: blink 0.75s infinite;
-  margin-left: -0.3rem;
-}
-
-@keyframes blink {
-  0% {
-    color: var(--accent);
-  }
-  50% {
-    color: var(--bg);
-  }
 }
 
 .CenterDivider {
@@ -166,79 +138,6 @@ h3 {
   display: none;
 }
 
-/** If i want fancy cards, kinda scuffed */
-
-/* .ProjectListContainer {
-  max-width: 40rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  height: auto;
-}
-
-#ProjectListContainer:hover > .CardContainer::after {
-  opacity: 1;
-}
-
-.CardContainer {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  display: flex;
-
-  flex-direction: column;
-  position: relative;
-}
-
-.CardContainer:hover::before {
-  opacity: 1;
-}
-
-.CardContainer::before,
-.CardContainer::after {
-  border-radius: inherit;
-  content: "";
-  height: 100%;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  transition: opacity 300ms ease-out;
-  width: 100%;
-}
-
-.CardContainer::before {
-  background: radial-gradient(
-    400px circle at var(--x) var(--y),
-    rgba(255, 255, 255, 0.03),
-    transparent 50%
-  );
-  z-index: 3;
-}
-
-.CardContainer::after {
-  background: radial-gradient(
-    600px circle at var(--x) var(--y),
-    rgba(255, 255, 255, 0.06),
-    transparent 40%
-  );
-  z-index: 3;
-}
-
-.CardContent {
-  background-color: var(--bg);
-  border-radius: inherit;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  inset: 1px;
-  padding: 0.75rem;
-  margin: 2px;
-
-  z-index: 2;
-} */
-
-/** end scuffed */
-
 .ProjectListContainer {
   max-width: 40rem;
   display: flex;
@@ -250,56 +149,6 @@ h3 {
 
 .ProjectsHeader {
   display: none;
-}
-
-.CardContainer {
-  background-color: #343434;
-  position: relative;
-  box-shadow: 1rem 0.75rem 2rem 1rem rgba(0, 0, 0, 0.5);
-  border-radius: 0.75rem;
-  z-index: 1;
-}
-
-.CardContent {
-  padding: 0.75rem;
-  margin: 2px;
-  border-radius: inherit;
-  background-color: var(--bg);
-  z-index: 3;
-}
-
-.ProjectInfoContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.ProjectTechUsedContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding-top: 1rem;
-  font-size: 1.25rem;
-}
-
-.TechIcon {
-  border: 0.15rem solid #343434;
-  color: var(--text-secondary);
-  border-radius: 0.75rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0.5rem;
-
-  transition: transform 0.5s, border-color 0.5s, color 0.5s;
-}
-
-.TechIcon:hover {
-  transform: scale(1.05);
-  border-color: var(--text-secondary);
-  color: var(--accent);
-
-  transition: transform 0.5s, border-color 0.5s, color 0.5s;
 }
 
 .ProjectName {
