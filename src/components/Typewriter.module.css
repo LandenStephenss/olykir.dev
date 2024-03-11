@@ -1,5 +1,5 @@
 .TypewriterBar {
-  color: var(--accent) !important;
+  color: var(--accent);
   font-weight: 400;
   animation: blink 0.75s infinite;
   margin-left: -0.3rem;

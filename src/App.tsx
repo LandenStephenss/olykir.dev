@@ -4,16 +4,6 @@ import {
   faDiscord,
   faSteam,
   faTiktok,
-  faReact,
-  faNodeJs,
-  faFigma,
-  faApple,
-  faDocker,
-  faCloudflare,
-  faHtml5,
-  faSquareJs,
-  faGitAlt,
-  faSass,
 } from "@fortawesome/free-brands-svg-icons";
 import "./App.css";
 import React from "react";
@@ -21,81 +11,9 @@ import React from "react";
 // Components
 import ProjectCard from "./components/ProjectCard.tsx";
 import TypewriterEffectWithMultipleLines from "./components/Typewriter.tsx";
+import TechCard from "./components/TechCard.tsx";
 
-const Projects = [
-  {
-    title: "Saber",
-    description: (
-      <>
-        A Discord bot for{" "}
-        <a
-          style={{ textDecoration: "none", color: "var(--text-secondary)" }}
-          href="https://vpsnode.org"
-        >
-          VPSNode
-        </a>
-      </>
-    ),
-    tech: [faDiscord, faNodeJs],
-    link: "https://github.com",
-  },
-  {
-    title: "WooferDesigner",
-    description: "A specialized tool for designing subwoofer enclosures.",
-    tech: [faFigma, faReact, faApple],
-    link: "https://facebook.com",
-  },
-];
-
-const UsedTech = [
-  {
-    icon: faReact,
-    url: "https://google.com",
-  },
-  {
-    icon: faGitAlt,
-    url: "https://github.com",
-  },
-  {
-    icon: faFigma,
-    url: "https://figma.com",
-  },
-  {
-    icon: faDocker,
-    url: "",
-  },
-  {
-    icon: faCloudflare,
-    url: "https://cloudflare.com",
-  },
-  {
-    icon: faHtml5,
-    url: "",
-  },
-  {
-    icon: faSquareJs,
-    url: "",
-  },
-  {
-    icon: faNodeJs,
-    url: "",
-  },
-  {
-    icon: faSass,
-    url: "",
-  },
-];
-
-function TechCard(tech) {
-  console.log(tech);
-  return (
-    <a href={tech.url}>
-      <div className="TechUsedCard">
-        <FontAwesomeIcon icon={tech.icon} />
-      </div>
-    </a>
-  );
-}
+import { Projects, UsedTech } from "./constants.tsx";
 
 function App() {
   return (

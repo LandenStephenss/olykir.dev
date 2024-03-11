@@ -9,11 +9,11 @@ import Styles from "./ProjectCard.module.scss";
 export type Project = {
   title: string;
   description: string | ReactNode;
-  link: string;
+  link?: string;
   tech: any[];
 };
 
-export function RenderLinkIcon({ link }) {
+export function RenderLinkIcon({ link }: { link: string }) {
   if (link.includes("github")) {
     return <FontAwesomeIcon icon={faGitAlt} />;
   }

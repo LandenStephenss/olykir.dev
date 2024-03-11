@@ -40,7 +40,7 @@
 
   &:hover {
     transform: scale(1.05);
-    border-color: var(--text-secondary);
+    border-color: var(--hover-interact);
     color: var(--accent);
     transition: transform 0.5s, border-color 0.5s, color 0.5s;
   }

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Styles from "./Typewriter.module.scss";
+import Styles from "./Typewriter.module.css";
 
-export default function TypewriterEffectWithMultipleLines({ lines }) {
+export default function TypewriterEffectWithMultipleLines({
+  lines,
+}: {
+  lines: string[];
+}) {
   const [currentLine, setCurrentLine] = useState(lines[0]);
 
   const [currentText, setCurrentText] = useState("");
@@ -36,9 +40,6 @@ export default function TypewriterEffectWithMultipleLines({ lines }) {
 
         setCurrentIndex(0);
         setCurrentText("");
-
-        // setCurrentText("");
-        // setCurrentIndex(1);
       }, 3000);
 
       return () => {

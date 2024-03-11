@@ -3,6 +3,7 @@
   --text: #fff;
   --text-secondary: #a2a2a2;
   --accent: #bb4b4b;
+  --hover-interact: #555555;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
@@ -165,28 +166,6 @@ h3 {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.75rem;
-}
-
-.TechUsedCard {
-  width: 6rem;
-  height: 6rem;
-  border: 3px solid #343434;
-  border-radius: 0.75rem;
-  color: var(--text-secondary);
-  font-size: 3rem;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-
-  transition: all 0.5s;
-}
-
-.TechUsedCard:hover {
-  border: 3px solid var(--text-secondary);
-  color: var(--accent);
-  transform: scale(1.05);
-
-  transition: all 0.5s;
 }
 
 /* This is all stuff for mobile */
