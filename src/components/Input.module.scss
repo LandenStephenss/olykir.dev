@@ -1,0 +1,63 @@
+.TextInputField {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 0.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  height: 2rem;
+  padding: 1rem;
+  transition: border 0.5s;
+
+  &:hover {
+    border: 2px solid var(--hover-interact);
+    transition: border 0.5s;
+  }
+
+  & > input:active,
+  & > input:focus {
+    outline: none;
+  }
+
+  & > input {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    font-size: 1.25rem;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.ButtonInput {
+  padding: 0.8rem;
+  border-radius: 0.75rem;
+  width: fit-content;
+  cursor: pointer;
+
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.25s;
+
+  &:hover {
+    filter: brightness(125%);
+    transition: filter 0.25s;
+  }
+
+  &:active {
+    filter: brightness(200%);
+  }
+
+  & > p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    user-select: none;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+}

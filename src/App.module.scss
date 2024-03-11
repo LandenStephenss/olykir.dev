@@ -29,22 +29,28 @@ h3 {
   display: grid;
 
   grid-template-areas:
-    "i d p"
-    "t d p";
+    "information divider projects"
+    "tech divider projects"
+    "divider3 divider projects"
+    "contactme divider projects";
 
   grid-template-columns: 44% 12% 44%;
 }
 
 .GridInfoArea {
-  grid-area: i;
+  grid-area: information;
 }
 
 .GridProjectsArea {
-  grid-area: p;
+  grid-area: projects;
+}
+
+.ContactMeArea {
+  grid-area: contactme;
 }
 
 .GridTechnologyArea {
-  grid-area: t;
+  grid-area: tech;
 }
 
 .App {
@@ -107,12 +113,12 @@ h3 {
   color: #a2a2a2;
   transition: all 0.25s;
   font-size: 2.25rem;
-}
 
-.LinksBoutSelf > a:hover {
-  color: var(--accent);
-  transform: scale(1.1);
-  transition: all 0.25s;
+  &:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+    transition: all 0.25s;
+  }
 }
 
 .Header {
@@ -132,11 +138,25 @@ h3 {
 
   transition: height 0.25s;
 
-  grid-area: d;
+  grid-area: divider;
 }
 
 .TechDivider {
   display: none;
+}
+
+.ContactDivider {
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5rem;
+
+  transition: width 0.25s;
+  margin-top: 3.5rem;
+  grid-area: divider3;
 }
 
 .ProjectListContainer {
@@ -168,18 +188,45 @@ h3 {
   gap: 0.75rem;
 }
 
+.HaveIdea {
+  font-size: 1.75rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+.LetsChat {
+  text-decoration: underline var(--accent);
+  margin-top: 0rem;
+  font-size: 2.5rem;
+}
+
+.ContactMeInputs {
+  display: grid;
+  grid-template-areas: "email name" "message message";
+  gap: 1rem;
+}
+
 /* This is all stuff for mobile */
 @media screen and (max-width: 800px) {
   .AppGrid {
     grid-template-areas:
-      "i"
-      "d"
-      "p"
-      "dd"
-      "t";
+      "information"
+      "divider"
+      "projects"
+      "divider2"
+      "tech"
+      "divider3"
+      "contactme";
 
     grid-template-columns: 100%;
     padding: 2rem;
+  }
+
+  .ContactMeInputs {
+    display: grid;
+    grid-template-areas: "email" "name" "message";
+    gap: 1rem;
   }
 
   .CenterDivider {
@@ -201,7 +248,7 @@ h3 {
 
     transition: width 0.25s;
     margin-top: 3.5rem;
-    grid-area: dd;
+    grid-area: divider2;
   }
 
   .ProjectsHeader {

@@ -33,7 +33,7 @@ export default function ProjectCard(project: Project) {
           }}
         >
           <div className={Styles.ProjectInfoContainer}>
-            <h3 className={Styles.ProjectName}>{project.title}</h3>
+            <h2 className={Styles.ProjectName}>{project.title}</h2>
             <p className={Styles.ProjectDescription}>{project.description}</p>
           </div>
           {project.link ? (

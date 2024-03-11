@@ -18,3 +18,10 @@
     transition: all 0.5s;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .TechCard {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}
