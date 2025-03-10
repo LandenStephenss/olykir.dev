@@ -5,13 +5,13 @@ import {
   faReact,
   faNodeJs,
   faFigma,
-  faApple,
   faDocker,
   faCloudflare,
   faHtml5,
   faSquareJs,
   faGitAlt,
   faSass,
+  faNpm,
 } from "@fortawesome/free-brands-svg-icons";
 import { Project } from "./components/ProjectCard";
 import { Tech } from "./components/TechCard";
@@ -31,12 +31,19 @@ export const Projects: Project[] = [
       </>
     ),
     tech: [faDiscord, faNodeJs],
-    link: "https://github.com",
   },
   {
-    title: "WooferDesigner",
-    description: "A specialized tool for designing subwoofer enclosures.",
-    tech: [faFigma, faReact, faApple],
+    title: "KoiNodes Web",
+    description: "KoiNode's front-end user interface, made with MantineUI.",
+    tech: [faFigma, faReact, faSass, faNpm],
+    link: "https://koinodes.com",
+  },
+  {
+    title: "KoiNodes Backend",
+    description:
+      "KoiNode's backend-end system to handle payments, server management, etc.",
+    tech: [faNpm, faNodeJs, faCloudflare],
+    link: "https://koinodes.com",
   },
 ];
 

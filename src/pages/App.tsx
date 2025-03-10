@@ -10,17 +10,17 @@ import Styles from "./App.module.scss";
 import React, { ComponentProps, useState } from "react";
 
 // Components
-import ProjectCard from "./components/ProjectCard.tsx";
-import TypewriterEffectWithMultipleLines from "./components/Typewriter.tsx";
-import TechCard from "./components/TechCard.tsx";
+import ProjectCard from "../components/ProjectCard.tsx";
+import TypewriterEffectWithMultipleLines from "../components/Typewriter.tsx";
+import TechCard from "../components/TechCard.tsx";
 import {
   useInput,
   TextInput,
   ButtonInput,
   TextAreaInput,
-} from "./components/Input.tsx";
+} from "../components/Input.tsx";
 
-import { Projects, UsedTech } from "./constants.tsx";
+import { Projects, UsedTech } from "../constants.tsx";
 
 function InformationAboutSelf() {
   return (

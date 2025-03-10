@@ -1,15 +1,31 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
 import reportWebVitals from "./reportWebVitals.ts";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Landing from "./pages/App";
+import CDN, { CDNLoader } from "./pages/CDN.tsx";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Landing />,
+  },
+  {
+    path: "/x/:id",
+    element: <CDN />,
+    loader: CDNLoader,
+  },
+]);
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
