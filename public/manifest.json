@@ -1,8 +1,0 @@
-{
-  "short_name": "Portfolio",
-  "name": "www.olykir.dev portfolio",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#bb4b4b",
-  "background_color": "#101010"
-}
