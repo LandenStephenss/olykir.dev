@@ -9,17 +9,17 @@ import {
 import { Button } from "./ui/Button";
 import { Badge } from "./ui/Badge";
 import { ImageWithFallback } from "./ui/ImageWithFallback";
+import VibeCTRLImage from "../../../public/IMG_1126.jpg";
 
 const projects = [
   {
     title: "VibeCTRL Platform",
     description:
       "Leading development of innovative hardware control systems and web interfaces for VibeCTRL. Building scalable firmware solutions and responsive web applications.",
-    image:
-      "https://images.unsplash.com/photo-1640552421163-5a8e34827550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXJjdWl0JTIwYm9hcmQlMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc2NjUyMDY5MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Firmware", "React", "Node.js", "IoT"],
+    image: VibeCTRLImage.src,
+    tags: ["React", "React Native", "Node.js", "IoT", "C++"],
     featured: true,
-    link: "https://vibectrl.com",
+    link: null,
     github: null,
   },
   {
@@ -28,10 +28,10 @@ const projects = [
       "A meta moment: the very website you're looking at right now. Built to showcase my work while procrastinating on actual client projects. Featuring a dark theme that definitely won't hurt your eyes at 3 AM.",
     image:
       "https://images.unsplash.com/photo-1760548425425-e42e77fa38f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb2RpbmclMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NjY2MTg0MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    tags: ["React", "TypeScript", "Tailwind CSS", "NextJS"],
     featured: false,
     link: "#",
-    github: "https://github.com",
+    github: "https://github.com/LandenStephenss/olykir.dev",
   },
 ];
 

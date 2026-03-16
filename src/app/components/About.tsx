@@ -27,7 +27,7 @@ export function About() {
             hardware integration. I&apos;ve built robust systems using{" "}
             <strong className="text-rose-400">Discord.js</strong> and created
             scalable applications with{" "}
-            <strong className="text-rose-400">Vite</strong> and other modern
+            <strong className="text-rose-400">NextJS</strong> and other modern
             frameworks.
           </p>
           <p>

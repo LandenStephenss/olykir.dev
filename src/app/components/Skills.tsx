@@ -15,7 +15,7 @@ const skillCategories = [
     skills: [
       "React",
       "Preact",
-      "Vite",
+      "NextJS",
       "Tailwind CSS",
       "TypeScript",
       "JavaScript",
@@ -25,14 +25,14 @@ const skillCategories = [
     icon: Terminal,
     title: "Backend Development",
     description: "Server-side technologies",
-    skills: ["Node.js", "Discord.js", "REST APIs", "WebSocket", "Express"],
+    skills: ["Node.js", "Discord.js", "REST APIs", "WebSocket", "Fastify"],
   },
   {
     icon: Cpu,
     title: "Firmware Development",
     description: "Embedded systems and hardware integration",
     skills: [
-      "C/C++",
+      "C++",
       "Embedded Systems",
       "Microcontrollers",
       "IoT",
@@ -43,7 +43,7 @@ const skillCategories = [
     icon: Globe,
     title: "Tools & Platforms",
     description: "Development and deployment tools",
-    skills: ["Git", "Docker", "CI/CD", "Linux", "VS Code", "Webpack"],
+    skills: ["Git", "Docker", "CI/CD", "Linux", "VS Code", "Webpack", "Docker"],
   },
 ];
 
