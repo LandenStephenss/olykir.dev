@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram, Video } from "lucide-react";
+import { Github, Instagram, Video } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -36,7 +36,7 @@ export function Contact() {
               <Button
                 asChild
                 size="lg"
-                className="bg-rose-500 hover:bg-rose-600"
+                className="site-button-primary rounded-sm font-semibold"
               >
                 <a href="mailto:olykirr@gmail.com">Send Email</a>
               </Button>
@@ -44,10 +44,10 @@ export function Contact() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-slate-700 text-white hover:bg-slate-900"
+                className="site-button-secondary rounded-sm font-semibold"
               >
                 <a
-                  href="https://vibectrl.com"
+                  href="https://vibectrl.net"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -57,22 +57,13 @@ export function Contact() {
             </div>
             <div className="grid grid-cols-2 sm:flex sm:justify-center gap-4 pt-4">
               <a
-                href="https://github.com/LandenStephenss"
+                href="https://github.com/LandenStephess"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-slate-400 hover:text-rose-400 transition-colors"
               >
                 <Github className="w-5 h-5" />
                 <span>GitHub</span>
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-slate-400 hover:text-rose-400 transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-                <span>LinkedIn</span>
               </a>
               <a
                 href="https://instagram.com/rt.olykir"

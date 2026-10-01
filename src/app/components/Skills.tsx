@@ -63,11 +63,11 @@ export function Skills() {
             return (
               <Card
                 key={index}
-                className="hover:shadow-lg transition-shadow bg-black border-slate-800 hover:border-rose-900"
+                className="skill-card hover:shadow-lg transition-shadow bg-black border-slate-800"
               >
                 <CardHeader>
-                  <div className="w-12 h-12 bg-rose-950 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-rose-400" />
+                  <div className="skill-icon w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6" />
                   </div>
                   <CardTitle className="text-white">{category.title}</CardTitle>
                   <CardDescription className="text-slate-400">

@@ -30,8 +30,8 @@ const projects = [
       "https://images.unsplash.com/photo-1760548425425-e42e77fa38f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb2RpbmclMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NjY2MTg0MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     tags: ["React", "TypeScript", "Tailwind CSS", "NextJS"],
     featured: false,
-    link: "#",
-    github: "https://github.com/LandenStephenss/olykir.dev",
+    link: "/",
+    github: "https://github.com/LandenStephess/olykir.dev",
   },
 ];
 
@@ -90,14 +90,14 @@ export function Projects() {
                         <Button
                           asChild
                           variant="default"
-                          className="bg-rose-500 hover:bg-rose-600"
+                          className="site-button-primary rounded-sm font-semibold"
                         >
                           <a
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <ExternalLink className="w-4 h-4 mr-2" />
+                            <ExternalLink className="w-4 h-4" />
                             Visit Site
                           </a>
                         </Button>
@@ -106,14 +106,14 @@ export function Projects() {
                         <Button
                           asChild
                           variant="outline"
-                          className="border-slate-700 text-white hover:bg-slate-900"
+                          className="site-button-secondary rounded-sm font-semibold"
                         >
                           <a
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <Github className="w-4 h-4 mr-2" />
+                            <Github className="w-4 h-4" />
                             View Code
                           </a>
                         </Button>

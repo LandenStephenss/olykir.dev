@@ -1,21 +1,20 @@
 export function About() {
   return (
     <section id="about" className="py-20 px-6 bg-slate-900">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+      <div className="about-layout max-w-6xl mx-auto">
+        <div className="about-heading">
           <h2 className="text-4xl mb-4 text-white">About Me</h2>
           <p className="text-xl text-slate-400">
             Developer, creator, and automotive enthusiast
           </p>
         </div>
-        <div className="prose prose-lg max-w-none text-slate-300 prose-headings:text-white prose-strong:text-white">
+        <div className="about-copy prose prose-lg max-w-none text-slate-300 prose-headings:text-white prose-strong:text-white">
           <p>
             Hey, I&apos;m{" "}
-            <strong className="text-rose-400">Landen Stephens</strong> – a web
-            and firmware developer with a passion for both cutting-edge
-            technology and automotive culture. By day, I&apos;m building
-            innovative solutions at{" "}
-            <strong className="text-rose-400">VibeCTRL</strong>, working on
+            <strong className="text-rose-400">Landen Stephens</strong>, a web
+            and firmware developer drawn to emerging technology and automotive
+            culture. By day, I operate CNC machines; by night, I build at{" "}
+            <strong className="text-rose-400">VibeCTRL</strong>, creating
             everything from embedded systems to modern web applications.
           </p>
           <p>

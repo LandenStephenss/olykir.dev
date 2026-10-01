@@ -1,93 +1,90 @@
-import { Github, Linkedin, Globe, Instagram, Video } from "lucide-react";
+import {
+  Github,
+  Globe,
+  Instagram,
+  Video,
+  ArrowDownRight,
+  ArrowUpRight,
+} from "lucide-react";
 import { ImageWithFallback } from "./ui/ImageWithFallback";
-import Charger from "../../../public/IMG_1150.jpg";
+import Charger from "../../../public/IMG_2586.png";
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-black via-slate-950 to-black">
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <div className="space-y-2">
-            <p className="text-rose-400">
-              Web & Firmware Developer • Car Content Creator
-            </p>
-            <h1 className="text-5xl md:text-6xl text-white">Landen Stephens</h1>
-            <p className="text-2xl text-slate-400">aka Olykir</p>
-            <p className="text-xl text-slate-300">
-              Building Technology & Creating Content
-            </p>
-          </div>
-          <p className="text-xl text-slate-300">
-            Specializing in full-stack development and embedded systems at
-            VibeCTRL, while sharing my passion for cars through content on
-            TikTok and Instagram.
+    <section className="hero min-h-screen flex items-center px-6 py-28">
+      <div className="hero-grid" />
+      <div className="max-w-7xl w-full mx-auto grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+        <div className="hero-copy">
+          <p className="eyebrow">01 / Independent developer + creator</p>
+          <h1 style={{ letterSpacing: "-2px" }}>
+            Digital systems with a <em>human</em> pulse.
+          </h1>
+          <p className="hero-lede">
+            I&apos;m Landen Stephens, aka Olykir. I build web applications and
+            microcontroller-powered products, taking ideas from the first sketch
+            to the final shipped experience.
           </p>
-          <div className="flex gap-4 pt-4">
-            <a
-              className="bg-rose-500 hover:bg-rose-700 py-2 px-2 rounded-lg transition-all duration-300"
-              href="#projects"
-            >
-              View My Work
+          <div className="flex flex-wrap gap-3 pt-8">
+            <a className="button-solid" href="#projects">
+              Explore the work <ArrowDownRight className="w-4 h-4" />
             </a>
-
-            <a
-              className="border-slate-700 border-1 hover:bg-slate-900 py-2 px-2 rounded-lg transition-all duration-300 hover:text-rose-400"
-              href="#contact"
-            >
-              Get in Touch
+            <a className="button-line" href="#contact">
+              Start a conversation <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
-          <div className="flex gap-4 pt-4">
+          <div className="hero-socials">
             <a
-              href="https://github.com/LandenStephenss"
+              href="https://github.com/LandenStephess"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-rose-400 transition-colors duration-250"
+              className="social-link"
+              aria-label="GitHub"
             >
               <Github className="w-6 h-6" />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-400 hover:text-rose-400 transition-colors duration-250"
-            >
-              <Linkedin className="w-6 h-6" />
             </a>
             <a
               href="https://instagram.com/rt.olykir"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-rose-400 transition-colors duration-250"
+              className="social-link"
+              aria-label="Instagram"
             >
               <Instagram className="w-6 h-6" />
             </a>
             <a
-              href="https://tiktok.com/@Olykir"
+              href="https://tiktok.com/@olykir"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-rose-400 transition-colors duration-250"
+              className="social-link"
+              aria-label="TikTok"
             >
               <Video className="w-6 h-6" />
             </a>
             <a
-              href="https://vibectrl.com"
+              href="https://vibectrl.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-rose-400 transition-colors duration-250"
+              className="social-link"
+              aria-label="VibeCTRL"
             >
               <Globe className="w-6 h-6" />
             </a>
           </div>
         </div>
-        <div className="relative">
-          <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+        <div className="hero-visual relative">
+          <div className="hero-image relative z-10 overflow-hidden">
             <ImageWithFallback
               src={Charger.src}
               alt="Sports car"
               className="w-full h-auto"
             />
           </div>
-          <div className="absolute inset-0 bg-rose-500/20 rounded-2xl blur-3xl -z-0 transform scale-95"></div>
+          <div className="hero-caption">
+            <span className="location-label">
+              <span className="location-dot" />
+              Based in Oklahoma
+            </span>
+            <span>Available for select work</span>
+          </div>
         </div>
       </div>
     </section>
