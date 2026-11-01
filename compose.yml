@@ -13,7 +13,7 @@ services:
     expose:
       - "3000"
     networks:
-      - shared-web
+      - shared-proxy
 
 networks:
   shared-web:
