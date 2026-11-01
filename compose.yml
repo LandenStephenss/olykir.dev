@@ -16,5 +16,5 @@ services:
       - shared-proxy
 
 networks:
-  shared-web:
+  shared-proxy:
     external: true
