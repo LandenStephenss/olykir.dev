@@ -1,0 +1,7 @@
+olykir.dev {
+    reverse_proxy nextjs:3000
+}
+
+www.olykir.dev {
+    redir https://olykir.dev{uri} permanent
+}
