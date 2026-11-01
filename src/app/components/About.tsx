@@ -1,10 +1,10 @@
 export function About() {
   return (
-    <section id="about" className="py-20 px-6 bg-slate-900">
+    <section id="about" className="px-6 py-16 bg-slate-900">
       <div className="about-layout max-w-6xl mx-auto">
         <div className="about-heading">
-          <h2 className="text-4xl mb-4 text-white">About Me</h2>
-          <p className="text-xl text-slate-400">
+          <h2 className="mb-3 text-white">About Me</h2>
+          <p className="text-base text-slate-400">
             Developer, creator, and automotive enthusiast
           </p>
         </div>

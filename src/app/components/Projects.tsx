@@ -17,9 +17,9 @@ const projects = [
     description:
       "Leading development of innovative hardware control systems and web interfaces for VibeCTRL. Building scalable firmware solutions and responsive web applications.",
     image: VibeCTRLImage.src,
-    tags: ["React", "React Native", "Node.js", "IoT", "C++"],
+    tags: ["React", "React Native", "Node.js", "IoT", "C++", "NextJS"],
     featured: true,
-    link: null,
+    link: 'https://vibectrl.net',
     github: null,
   },
   {
