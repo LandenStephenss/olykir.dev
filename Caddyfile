@@ -1,4 +1,5 @@
 olykir.dev {
+    encode zstd gzip
     reverse_proxy nextjs:3000
 }
 

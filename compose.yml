@@ -13,29 +13,8 @@ services:
     expose:
       - "3000"
     networks:
-      - web
-
-  caddy:
-    image: caddy:2-alpine
-    container_name: olykir-caddy
-    restart: unless-stopped
-    depends_on:
-      - nextjs
-    ports:
-      - "80:80"
-      - "443:443"
-      - "443:443/udp"
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy_data:/data
-      - caddy_config:/config
-    networks:
-      - web
-
-volumes:
-  caddy_data:
-  caddy_config:
+      - shared-web
 
 networks:
-  web:
-    driver: bridge
+  shared-web:
+    external: true
